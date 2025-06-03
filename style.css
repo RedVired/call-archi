@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-image: url(light/headerlight.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerback {
+  background-color: #1a1a1a;
+}
+
+header .headline {
+  color: #fff;
+  display: grid;
+  grid-template-areas: "h1 h1" "p button";
+  width: 40vw;
+}
+
+header .headline h1 {
+  grid-area: h1;
+  font-size: 110pt;
+  line-height: 100pt;
+  font-weight: 500;
+}
+
+header .headline p {
+  grid-area: p;
+  font-size: 16pt;
+  margin: 10px;
+  margin-top: 30px;
+  font-weight: 400;
+}
+
+header .links {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+header .links a {
+  color: #fff;
+  font-size: 30pt;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+header .links div {
+  height: 2px;
+  width: 100%;
+  background-color: #e42b26;
+}
+
+header .links a:hover {
+  animation: forwards 200ms ease-in-out linkshover;
+}
+
+header .links a:not(:hover) {
+  animation: forwards 200ms ease-in-out linksnothover;
+}
+
+@keyframes linkshover {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(5px, 0);
+  }
+}
+
+@keyframes linksnothover {
+  from {
+    transform: translate(5px, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+header .button {
+  grid-area: button;
+  color: #fff;
+  font-size: 30pt;
+  background-color: #e42b26;
+  border-radius: 100vh;
+  padding: 0 40px 5px 40px;
+  margin: 20px;
+  text-align: center;
+  align-content: center;
+  height: 60pt;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+header .button:hover {
+  background-color: #f28c38;
+  transition: all 200ms ease-in-out;
+}
+
+header .button:not(:hover) {
+  background-color: #e42b26;
+  transition: all 200ms ease-in-out;
+}
+
+section#aboutus {
+  padding: 10vh 20vw 10vh 20vw;
+  background-color: #fff;
+}
+
+section#aboutus h1 {
+  text-align: right;
+  font-size: 40pt;
+  padding-left: 40%;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+section#aboutus p {
+  text-align: left;
+  font-size: 20pt;
+  padding-right: 20%;
+  font-weight: 500;
+}
+
+section#cases {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+
+section#workstages {
+  padding: 10vh 25vw 10vh 25vw;
+}
+
+section#workstages h1 {
+  text-align: right;
+  font-size: 40pt;
+  padding-left: 40%;
+  font-weight: 500;
+  margin-bottom: 80px;
+}
+
+section#workstages .grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "cardgrid info";
+  gap: 15px;
+}
+
+section#workstages .cardgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+section#workstages .card {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  border: solid 5px #f5f5f5;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+}
+
+section#workstages .card h1 {
+  text-align: left;
+  padding-left: 10%;
+  padding-top: 5%;
+  margin: 0;
+  color: #adadad;
+  font-weight: 900;
+  font-size: 40pt;
+  height: 40pt;
+}
+
+section#workstages .card p {
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 20pt;
+  font-weight: 500;
+}
+
+section#workstages .card .box {
+  display: flex;
+  height: 20pt;
+  width: 20pt;
+  /*background-color: #adadad;*/
+  margin-right: 10%;
+  margin-bottom: 5%;
+  justify-self: end;
+  align-self: self-end;
+  justify-content: center;
+  align-items: center;
+}
+
+section#workstages .card .box span {
+  background-color: #adadad;
+  display: block;
+  position: absolute;
+}
+
+section#workstages .card .box span.f {
+  width: 20pt;
+  height: 5px;
+}
+
+section#workstages .card .box span.s {
+  width: 5px;
+  height: 20pt;
+}
+
+section#workstages .card:hover .box span.f {
+  animation: spanf forwards 300ms ease-in-out;
+}
+
+section#workstages .card:not(:hover) .box span.f {
+  animation: notspanf forwards 300ms ease-in-out;
+}
+
+section#workstages .card:hover .box span.s {
+  animation: spans forwards 300ms ease-in-out;
+}
+
+section#workstages .card:not(:hover) .box span.s {
+  animation: notspans forwards 300ms ease-in-out;
+}
+
+@keyframes spanf {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes notspanf {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes spans {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes notspans {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
+section#workstages .card:hover {
+  border: solid 5px #ebebeb;
+}
+
+section#workstages .card.selected {
+  background-color: #ebebeb;
+  border: #ebebeb;
+}
+
+section#workstages .info {
+  grid-area: info;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 10%;
+  gap: 20px;
+}
+
+section#workstages .info span {
+  display: flex;
+}
+
+section#workstages .info span h2 {
+  color: #adadad;
+  font-weight: 900;
+  font-size: 40pt;
+}
+
+section#workstages .info span p {
+  font-size: 16pt;
+  font-weight: 500;
+}

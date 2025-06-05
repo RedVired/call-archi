@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
 }
 
 a {
@@ -23,7 +23,7 @@ header {
   background-size: cover;
   display: flex;
   height: 80vh;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
@@ -315,4 +315,350 @@ section#workstages .info span h2 {
 section#workstages .info span p {
   font-size: 16pt;
   font-weight: 500;
+}
+
+section#you {
+  background: linear-gradient(90deg, #ae6346, #824848);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+section#you .info {
+  margin: 10vh 0 10vh 15vw;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+section#you .info h1 {
+  font-size: 40pt;
+  font-weight: 700;
+}
+
+section#you .info .text {
+  margin-right: 15vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+section#you .info .text div {
+  width: 100%;
+  height: 2px;
+  background-color: #cf7d3b;
+}
+
+section#you .info .text p {
+  font-size: 25pt;
+  font-weight: 500;
+}
+
+section#you .img {
+  background-image: url(img/man-filming-with-professional-camera-new-movie.jpg);
+  height: auto;
+  width: 40vw;
+  background-position: center;
+  background-size: cover;
+}
+
+section#you .info a {
+  grid-area: button;
+  color: #fff;
+  font-size: 30pt;
+  background-color: #cf7d3b;
+  border-radius: 100vh;
+  padding: 0 40px 5px 40px;
+  margin-right: 10vw;
+  text-align: center;
+  align-content: center;
+  align-self: end;
+  height: 60pt;
+  white-space: nowrap;
+  font-weight: 600;
+  width: fit-content;
+}
+
+section#you .info a:hover {
+  background-color: #e42b26;
+  transition: all 200ms ease-in-out;
+}
+
+section#you .info a:not(:hover) {
+  background-color: #cf7d3b;
+  transition: all 200ms ease-in-out;
+}
+
+section#us {
+  background-color: #1a1a1a;
+}
+
+section#us .light {
+  height: 100%;
+  background-image: url(light/us-light.png);
+  background-position: top;
+  background-size: cover;
+  padding: 10vh 20vw 10vh 20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+section#us .light h1 {
+  font-size: 50pt;
+  text-align: center;
+  margin-bottom: 5vh;
+  font-weight: 500;
+}
+
+section#us .light .card {
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
+}
+
+section#us .light .card.left {
+  grid-template-areas: "img . info";
+}
+
+section#us .light .card.right {
+  grid-template-areas: "info . img";
+}
+
+section#us .light .card img {
+  grid-area: img;
+  width: 100%;
+  border-radius: 20px;
+}
+
+section#us .light .card .info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  transform: translateY(-5vh);
+}
+
+section#us .light .card .info h2 {
+  font-size: 40pt;
+  font-weight: 600;
+}
+
+section#us .light .card .info p {
+  font-size: 25pt;
+  font-weight: 400;
+}
+
+section#us .light .card .info p span {
+  color: #e42b26;
+  font-weight: 500;
+}
+
+section#start {
+  background-color: #fff;
+}
+
+section#start .light {
+  background-image: url(light/start-light.png);
+  background-size: cover;
+  background-position: top left;
+
+  height: 100%;
+  padding: 10vh 20vw 10vh 20vw;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+section#start .light .how {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+section#start .light .how h1 {
+  font-size: 40pt;
+  font-weight: 600;
+}
+
+section#start .light .how .list {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+section#start .light .how p {
+  font-size: 25pt;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 10px;
+  padding-bottom: 8px;
+}
+
+section#start .light .how p:not(:last-child) {
+  border-bottom: solid #e42b26 2px;
+}
+
+section#start .light .want {
+  width: min-content;
+  align-self: end;
+}
+
+section#start .light .want h1 {
+  width: 100%;
+  font-size: 40pt;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+section#start .light .want span {
+  color: #e42b26;
+}
+
+section#start .light .want p {
+  font-size: 25pt;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+footer .light {
+  background-image: url(light/footer-light.png);
+  background-position: top;
+  background-size: cover;
+  height: 100%;
+  padding: 10vh 20vw 10vh 20vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer .light .input {
+  display: flex;
+  flex-direction: column;
+  gap: 10;
+  padding: 0 5vw 0 0;
+}
+
+footer .light .input input {
+  font-size: 30pt;
+  font-weight: 400;
+  color: #fff;
+  background: none;
+  border: none;
+  border-bottom: #e42b26 solid 2pt;
+  margin-top: 15px;
+  padding-bottom: 12px;
+}
+
+footer .light .input button {
+  grid-area: button;
+  color: #fff;
+  font-size: 30pt;
+  background-color: #e42b26;
+  border-radius: 100vh;
+  padding: 0 40px 5px 40px;
+  margin: 20px;
+  text-align: center;
+  align-content: center;
+  height: 60pt;
+  white-space: nowrap;
+  font-weight: 600;
+  width: fit-content;
+  border: none;
+  align-self: end;
+}
+
+footer .light .input button:hover {
+  background-color: #f28c38;
+  transition: all 200ms ease-in-out;
+}
+
+footer .light .input button:not(:hover) {
+  background-color: #e42b26;
+  transition: all 200ms ease-in-out;
+}
+
+footer .light h1 {
+  font-size: 110pt;
+  line-height: 100pt;
+  font-weight: 500;
+  color: #fff;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #1a1a1a;
+    opacity: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 5px 0;
+    align-items: center;
+}
+
+nav h6 {
+    font-size: 25pt;
+    color: #fff;
+    margin-left: 50px;
+}
+
+nav .links {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+nav .links a {
+    font-size: 20pt;
+    color: #fff;
+}
+
+nav .links a:hover {
+    animation: forwards 200ms ease-in-out navlinkshover;
+}
+
+nav .links a:not(:hover) {
+    animation: forwards 200ms ease-in-out navlinksnothover;
+}
+
+@keyframes navlinkshover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes navlinksnothover {
+  from {
+    transform: translateY(-2px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+nav .links div {
+    height: 20pt;
+    width: 2px;
+    background-color: #e42b26;
+}
+
+nav.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+nav:not(.hidden) {
+    opacity: 80%;
+    transform: translateY(0px);
+    transition: all 500ms ease-in-out;
 }
